@@ -4,14 +4,35 @@ import ColorSelector from '../ColorSelector';
 import Shape from '../Shape';
 
 export default class NameTag extends PureComponent {
+  state = {
+    text: '',
+    color: '#000000',
+    backgroundColor: '#FF0000'
+  }
+
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  }
+
   render() {
     const { text, color, backgroundColor } = this.state;
-
+    
     return (
       <>
-        <TextSelector text={text} />
-        <ColorSelector color={color} backgroundColor={backgroundColor} />
-        <Shape />
+        <TextSelector
+          text={text}
+          handleChange={this.handleChange}
+        />
+        <ColorSelector
+          color={color}
+          backgroundColor={backgroundColor}
+          handleChange={this.handleChange}
+        />
+        <Shape
+          text={text}
+          color={color}
+          backgroundColor={backgroundColor}
+        />
       </>
     );
   }
