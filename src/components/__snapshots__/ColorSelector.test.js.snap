@@ -4,11 +4,15 @@ exports[`ColorSelector component renders a ColorSelector 1`] = `
 <Fragment>
   <input
     name="color"
+    onChange={[Function]}
     type="color"
+    value="red"
   />
   <input
     name="backgroundColor"
+    onChange={[Function]}
     type="color"
+    value="red"
   />
 </Fragment>
 `;

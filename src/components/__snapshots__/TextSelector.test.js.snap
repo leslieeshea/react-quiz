@@ -3,6 +3,8 @@
 exports[`TextSelector component renders a TextSelector 1`] = `
 <input
   name="text"
+  onChange={[Function]}
   type="text"
+  value="hi"
 />
 `;
